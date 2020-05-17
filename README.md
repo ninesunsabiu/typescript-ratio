@@ -7,10 +7,12 @@
 
 ## 用法
 1. 安装 deno [详见官网安装教程](https://deno.land/#installation)
-2. $ deno run --allow-read tsRatio.ts ${DIR_PATH}  
-*${DIR_PATH} 更换为你需要统计的目录 一般为项目中 src 目录*
-3. 你可以看见
+2. 运行脚本
 ```bash
-$ deno run --allow-read tsRatio.ts ./src
-Typescript rate is 41%, Javascript count is 1540, Typescript count is 1090
+deno run \
+--allow-net \
+--allow-read \
+https://raw.githubusercontent.com/ninesunsabiu/typescript-ratio/master/tsRatio.ts \
+${DIR_PATH}
 ```
+P.S. *如果 raw.githubusercontent.com 无法访问 请善用搜索引擎解决问题*
