@@ -20,8 +20,9 @@ async function tsRatio() {
     for await (const entry of walk(dirPath, walkOptions)) {
       if (entry.path.match(/\.tsx?$/)) {
         tsCount++;
+      } else {
+        jsCount++;
       }
-      jsCount++;
     }
     (tsCount + jsCount) &&
       console.log(
