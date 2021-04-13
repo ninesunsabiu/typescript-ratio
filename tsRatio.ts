@@ -1,4 +1,5 @@
-import { walk, WalkOptions } from "https://deno.land/std@0.51.0/fs/walk.ts";
+import type { WalkOptions } from 'https://deno.land/std@0.92.0/fs/mod.ts';
+import { walk } from 'https://deno.land/std@0.92.0/fs/mod.ts';
 
 const walkOptions: WalkOptions = {
   match: [/\.[jt]sx?$/],
